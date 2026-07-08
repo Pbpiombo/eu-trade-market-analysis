@@ -34,7 +34,7 @@ All raw economic datasets (Trade, GDP, and Unemployment) used in this repository
 
 Python · pandas · SQLite · SQL · matplotlib / seaborn · scipy
 
-### 1. DependenciesEnsure 
+### 1. Dependencies 
 
 Ensure you have all the required libraries installed. Since the repository includes a `requirements.txt` file, you can install everything automatically via pip:
 
