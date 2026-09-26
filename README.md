@@ -27,7 +27,7 @@ All raw datasets (trade, GDP, unemployment) were retrieved from the official Eur
 
 ## Key Findings
 
-**Trade volume matters weakly.** Trade openness shows a moderate negative correlation with unemployment (Pearson r = -0.42): more open economies tend to have lower unemployment, but the relationship is weak and dispersed, and likely confounded by country size and geography.
+**Trade volume matters weakly.** Trade openness shows a moderate negative correlation with unemployment (Pearson r = -0.41): more open economies tend to have lower unemployment, but the relationship is weak and dispersed, and likely confounded by country size and geography.
 
 **Composition matters more than volume.** The share of manufactured goods correlates more strongly with unemployment (r = -0.60, robust under Spearman ρ = -0.48) than trade openness does, suggesting that *what* a country exports is a better predictor of employment than *how much* it trades. The two metrics are largely independent (r = +0.22).
 
@@ -61,7 +61,7 @@ The data model is a star schema: two dimension tables (`dim_country`, `dim_year`
 
 ## Methodological Choices
 
-- **Trade openness** was computed as (exports + imports) / GDP using *nominal* values for both, ensuring price-basis consistency. The result holds under real GDP as well (r = -0.42 nominal vs -0.45 real), confirming robustness to the definition.
+- **Trade openness** was computed as (exports + imports) / GDP using *nominal* values for both, ensuring price-basis consistency. The result holds under real GDP as well (r = -0.41 nominal vs -0.45 real), confirming robustness to the definition.
 - **Outlier handling.** Greece and Spain are structural outliers with high unemployment. To avoid distortion, both mean and median were reported, and Pearson and Spearman correlations were compared as a robustness check.
 - **Shock measurement.** A *peak-to-trough* method was used, measuring the drop from the pre-crisis peak to the post-crisis minimum, with recovery defined as the return to pre-crisis levels. This method's limitations on series with strong pre-existing trends (e.g. Italian and French unemployment, already declining before 2020) were identified through rolling-window analysis and documented.
 - **Aggregation method.** SQL computes openness as the average of yearly ratios; the DAX measure `Trade openness % (avg of years)` replicates this, while a simpler ratio-of-sums measure would weight high-volume years more heavily. The two differ by a few points and the choice is stated rather than implicit.
