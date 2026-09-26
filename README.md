@@ -55,7 +55,7 @@ To replicate the full analysis pipeline, execute the notebooks sequentially acro
 
 - **`01-pre_exploration.ipynb`**  — initial exploration and pre-cleaning of the raw dataframes.
 - **`02-diagnostic_exploration/`** — full diagnostic and cleaning phase, saving outputs to both `data/clean_data/` and the database:
-  - `disoccupation_diagnostic_exploration.ipynb`
+  - `unemployment_diagnostic_exploration.ipynb`
   - `gdp_diagnostic_exploration.ipynb`
   - `InEx_Eu_trade_diagnostic_exploration.ipynb`
 - **`03-descriptive_analysis/`** — pre-question database exploration: load checks, dataframe dimensions, temporal limits, and measures by category and dimension:

@@ -18,3 +18,9 @@ env/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Environment variables (Azure credentials)
+.env
+
+# Power BI temp files
+*.pbix.tmp
